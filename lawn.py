@@ -6,7 +6,7 @@ Width = int(input("Enter the lawn width in metres\n> "))
 Length = int(input("Enter the lawn length in metres\n> "))
 SqrMeters = Width * Length
 
-LawnCareCost = 1
+LawnCareCost = 0
 while True:
     Quality = input("Enter the quality of lawn service you wish for:\nNone - 1\nEconomy - 2"
                     "\nStandard - 3\nLuxury - 4\n> ")
@@ -25,7 +25,7 @@ while True:
         print("Please enter a valid lawn quality service number, as indicated above.")
 
 CostSqrMeters = round(SqrMeters * 0.5, 2)
-LawnCareFactored = round(SqrMeters * LawnCareCost, 2)
+LawnCareFactored = SqrMeters * LawnCareCost
 TotalCost = round(CostSqrMeters + LawnCareFactored, 2)
 TotalVatCost = round(TotalCost * 1.2, 2)
 
